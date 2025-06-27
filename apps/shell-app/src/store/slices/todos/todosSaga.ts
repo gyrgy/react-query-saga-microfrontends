@@ -9,7 +9,7 @@ import {
 } from './todosSlice';
 import { AxiosResponse } from 'axios';
 import { Todo } from './types';
-import { fetchData } from '../../../queryClient/createQueryClient';
+import { fetchData } from '../../../queryClient/exposed';
 
 // Saga workers
 function* fetchTodosSaga(
