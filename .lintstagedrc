@@ -1,0 +1,16 @@
+{
+  "apps/shell-app/**/*.{js,jsx,ts,tsx}": [
+    "eslint --fix --config apps/shell-app/eslint.config.js",
+    "prettier --write --config apps/shell-app/.prettierrc.js"
+  ],
+  "apps/shell-app/**/*.{ts,tsx}": [
+    "tsc-files -p apps/shell-app/tsconfig.lint.json --noEmit"
+  ],
+  "apps/remote-app/**/*.{js,jsx,ts,tsx}": [
+    "eslint --fix --config apps/remote-app/eslint.config.js",
+    "prettier --write --config apps/remote-app/.prettierrc.js"
+  ],
+  "apps/remote-app/**/*.{ts,tsx}": [
+    "tsc-files -p apps/remote-app/tsconfig.lint.json --noEmit"
+  ]
+}

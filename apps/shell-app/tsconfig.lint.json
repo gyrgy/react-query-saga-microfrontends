@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./apps/shell-app/src/*"],
+      "shared/*": ["./shared/*"]
+    },
+    "types": [
+      "./apps/shell-app/src/types/remoteModules.d.ts",
+      "./shared/type-definitions/shellTypes.d.ts",
+      "./shared/type-definitions/axios.d.ts",
+      "node"
+    ]
+  },
+  "include": ["./apps/shell-app/src/**/*"]
+}

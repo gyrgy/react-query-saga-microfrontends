@@ -1,0 +1,51 @@
+{
+  "name": "remote-app",
+  "version": "0.0.1",
+  "private": true,
+  "author": "gyorgy",
+  "license": "MIT",
+  "scripts": {
+    "start": "rspack serve -c ./rspack.config.js",
+    "build": "rspack build -c ./rspack.config.js",
+    "build-sourcemaps": "SOURCE_MAPS=true rspack build -c ./rspack.config.js",
+    "build-analyze": "RSDOCTOR=true rspack build -c ./rspack.config.js",
+    "serve": "node serve.js",
+    "test": "jest",
+    "test-coverage": "npm test -- --coverage",
+    "jest-clear-cache": "jest --clearCache",
+    "tsc": "tsc --noEmit",
+    "lint": "eslint --config eslint.config.js src/ --fix --max-warnings=0 --no-cache",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "dependencies": {
+    "@emotion/core": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@fontsource/roboto": "*",
+    "@mui/material": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@module-federation/enhanced": "*",
+    "@rsdoctor/rspack-plugin": "*",
+    "@rspack/cli": "*",
+    "@rspack/core": "*",
+    "@rspack/dev-server": "*",
+    "@rspack/plugin-react-refresh": "*",
+    "react-refresh": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "dotenv": "*",
+    "typescript": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "@eslint/js": "*",
+    "eslint-import-resolver-typescript": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "prettier": "*"
+  }
+}
