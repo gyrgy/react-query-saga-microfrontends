@@ -110,6 +110,19 @@ This setup demonstrates how a micro-frontend can be a "dumb" UI layer that lever
     ```
 3.  Lerna will bootstrap the dependencies for all packages.
 
+### Environment Variables
+
+Each app requires its own environment configuration. You must create a `.env` file for both `shell-app` and `remote-app` before running the application:
+
+1. Navigate to each app directory:
+    - `apps/shell-app`
+    - `apps/remote-app`
+2. Copy the provided `.env.template` file to `.env`:
+    ```bash
+    cp .env.template .env
+    ```
+3. Edit the new `.env` file as needed for your local setup.
+
 ### Running the Application
 
 1.  This project uses `concurrently` to run both the shell and remote apps at the same time.
