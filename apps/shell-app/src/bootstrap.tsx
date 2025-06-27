@@ -6,6 +6,9 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { createQueryClient } from './queryClient/createQueryClient';
 import axiosSetUp from './helpers/axiosSetupHelper';
 import setupObserverLifecycle from './queryClient/observerLifecycle';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+const developmentMode = process.env.NODE_ENV === 'development';
 
 axiosSetUp();
 export const queryClient = createQueryClient();
@@ -23,6 +26,7 @@ root.render(
       <GlobalStore>
         <ThemeProvider>
           <App />
+          {developmentMode && <ReactQueryDevtools initialIsOpen={false} />}
         </ThemeProvider>
       </GlobalStore>
     </QueryClientProvider>
