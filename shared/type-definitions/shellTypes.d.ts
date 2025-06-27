@@ -1,10 +1,13 @@
 // Shell Module Declarations - Ambient declarations for Module Federation
 
 declare module "shell/queryClient" {
-  type StrictQueryKey =
-    import("../interfaces/queryClient.interface").StrictQueryKey;
-  type IQueryClient =
-    import("../interfaces/queryClient.interface").IQueryClient;
+  import { 
+    IQueryClient, 
+    StrictQueryKey, 
+    FetchQueryOptions, 
+    MutationOptions, 
+    HttpResponse 
+  } from "../interfaces/queryClient.interface";
 
   // Query Client API - only what other apps need
   export const fetchData: IQueryClient["fetchData"];
@@ -13,6 +16,8 @@ declare module "shell/queryClient" {
   export const removeCache: IQueryClient["removeCache"];
   export const getCache: IQueryClient["getCache"];
   export const setCache: IQueryClient["setCache"];
+  export const stopObserving: IQueryClient["stopObserving"];
+  export const stopAllObservers: IQueryClient["stopAllObservers"];
 }
 
 declare module "shell/ThemeProvider" {

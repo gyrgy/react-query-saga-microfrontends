@@ -41,7 +41,7 @@ module.exports = () => {
         name: 'shell',
         exposes: {
           './ThemeProvider': './src/providers/ThemeProvider',
-          './queryClient': './src/queryClient/createQueryClient',
+          './queryClient': './src/queryClient/exposed',
           './useAppSelector': './src/store/hooks',
           './useAppDispatch': './src/store/hooks',
           './actions': './src/store/exposedActions/exposedActions',

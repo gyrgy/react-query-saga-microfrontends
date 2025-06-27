@@ -33,7 +33,7 @@ export interface IQueryClient {
 
   // Data mutation
   mutateData<TResponseData = unknown, TVariables = unknown>(
-    options: MutationOptions<TVariables>,
+    options: MutationOptions<TVariables>
   ): Promise<HttpResponse<TResponseData>>;
 
   // Cache management
@@ -47,4 +47,7 @@ export interface IQueryClient {
     data: HttpResponse<TResponseData>,
     options?: { updatedAt?: number }
   ): void;
+
+  stopObserving(queryKey: StrictQueryKey): void;
+  stopAllObservers(): void;
 }
